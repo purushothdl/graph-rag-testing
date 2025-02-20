@@ -7,7 +7,7 @@ from vertexai.preview.generative_models import GenerativeModel
 class VertexAIService:
     def __init__(self, project_id, location="us-central1"):
         vertexai.init(project=project_id, location=location)
-        self.text_model = TextEmbeddingModel.from_pretrained("textembedding-gecko@latest")
+        self.text_model = TextEmbeddingModel.from_pretrained("text-embedding-004")
         self.multimodal_model = GenerativeModel("gemini-pro-vision")
     
     def get_text_embedding(self, text):

@@ -20,5 +20,16 @@ services:
     volumes:
       - neo4j_data:/data
 
+  streamlit_app:
+    build:
+      context: ./streamlit_app
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    depends_on:
+      - app
+    environment:
+      - BASE_URL=http://app:8000 # Ensure Streamlit knows where to reach the FastAPI app
+
 volumes:
   neo4j_data: 
