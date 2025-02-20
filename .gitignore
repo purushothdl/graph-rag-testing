@@ -1,0 +1,19 @@
+# Service account keys
+*.json
+rag_key.json
+service_account_key.json
+
+# Python
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+venv/
+.venv/
+
+# Docker
+/build
+
+# Environment files
+.env
+*.swp
